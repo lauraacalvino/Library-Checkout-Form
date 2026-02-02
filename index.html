@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>Nexus — Checkout Libros</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+  <header class="header header-home main-grid">
+    <div class="header-content">
+      <a class="logo-link" href="index.html">
+        <img src="img/brand_img/nexus_black.svg" alt="Logo Nexus" class="logo" />
+      </a>
+
+      <nav class="nav" aria-label="Navegación">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Librería</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Coworking</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Eventos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-template main-grid">
+    <section class="checkout">
+
+      <div class="pasos" aria-label="Stepper">
+        <button class="paso is-active" type="button" data-step="1">
+          <span class="paso-num">1</span>
+          <span class="paso-txt">Datos personales</span>
+        </button>
+
+        <button class="paso" type="button" data-step="2">
+          <span class="paso-num">2</span>
+          <span class="paso-txt">Envío</span>
+        </button>
+
+        <button class="paso" type="button" data-step="3">
+          <span class="paso-num">3</span>
+          <span class="paso-txt">Pago</span>
+        </button>
+      </div>
+
+      <button class="acordeon active" type="button" data-step="1" aria-controls="panel-1" aria-expanded="true">
+        1 · Datos personales
+      </button>
+      <div class="panel is-open" id="panel-1">
+        <form class="formulario" novalidate>
+          <div class="campo col-2">
+            <label for="email">Correo electrónico</label>
+            <input id="email" type="email" required placeholder="tuemail@ejemplo.com" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" required placeholder="Paola" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo">
+            <label for="apellidos">Apellidos</label>
+            <input id="apellidos" type="text" required placeholder="García" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo col-2">
+            <label for="libro">Libro</label>
+            <select id="libro" required>
+              <option value="" selected disabled>Selecciona un libro…</option>
+              <option>Atomic Habits</option>
+              <option>Clean Code</option>
+              <option>Design of Everyday Things</option>
+              <option>Thinking, Fast and Slow</option>
+            </select>
+            <p class="error-txt hidden">Selecciona una opción</p>
+          </div>
+
+          <div class="campo">
+            <label for="cantidad">Cantidad</label>
+            <input id="cantidad" type="number" min="1" max="10" required value="1" />
+            <p class="error-txt hidden">Indica una cantidad válida</p>
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" type="tel" placeholder="+34 600 000 000" />
+            <p class="error-txt hidden">Revisa el teléfono</p>
+          </div>
+
+          <div class="acciones col-2">
+            <button class="btn btn-form next" type="button" data-next="2">Continuar ➜</button>
+          </div>
+        </form>
+      </div>
+
+      <button class="acordeon" type="button" data-step="2" aria-controls="panel-2" aria-expanded="false">
+        2 · Datos de envío
+      </button>
+      <div class="panel" id="panel-2">
+        <form class="formulario" novalidate>
+          <div class="campo col-2">
+            <label for="direccion">Dirección</label>
+            <input id="direccion" type="text" required placeholder="C/ Ejemplo 12, 3ºA" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo">
+            <label for="ciudad">Ciudad</label>
+            <input id="ciudad" type="text" required placeholder="Barcelona" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo">
+            <label for="cp">Código postal</label>
+            <input id="cp" type="text" inputmode="numeric" required placeholder="08001" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo col-2">
+            <label for="pais">País</label>
+            <select id="pais" required>
+              <option value="" selected disabled>Selecciona…</option>
+              <option>España</option>
+              <option>Francia</option>
+              <option>Portugal</option>
+              <option>Italia</option>
+            </select>
+            <p class="error-txt hidden">Selecciona una opción</p>
+          </div>
+
+          <fieldset class="campo-radio col-2">
+            <legend>Método de envío</legend>
+
+            <label class="radio">
+              <input type="radio" name="envio" value="standard" required />
+              <span>Estándar (3–5 días)</span>
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="envio" value="express" required />
+              <span>Exprés (24–48h)</span>
+            </label>
+
+            <p class="error-txt hidden">Elige un método de envío</p>
+          </fieldset>
+
+          <div class="acciones col-2">
+            <button class="btn btn-form next" type="button" data-next="3">Continuar ➜</button>
+          </div>
+        </form>
+      </div>
+
+      <button class="acordeon" type="button" data-step="3" aria-controls="panel-3" aria-expanded="false">
+        3 · Datos de pago
+      </button>
+      <div class="panel" id="panel-3">
+        <form class="formulario" novalidate>
+          <div class="campo col-2">
+            <label for="tarjeta">Número de tarjeta</label>
+            <input id="tarjeta" type="text" inputmode="numeric" required placeholder="1234 5678 9012 3456" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo">
+            <label for="fecha">Expiración</label>
+            <input id="fecha" type="month" required />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <div class="campo">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="password" inputmode="numeric" required placeholder="123" />
+            <p class="error-txt hidden">Campo obligatorio</p>
+          </div>
+
+          <label class="check col-2">
+            <input id="terms" type="checkbox" required />
+            <span>Acepto los términos y condiciones</span>
+          </label>
+          <p class="error-txt hidden col-2">Debes aceptar los términos</p>
+
+          <div class="acciones col-2">
+            <button class="btn btn-send" type="button">FINALIZAR</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer main-grid">
+    <div class="footer-main">
+      <a class="logo-link-footer" href="index.html">
+        <img src="img/brand_img/nexus_black.svg" alt="Logo Nexus" class="logo-footer" />
+      </a>
+      <p class="footer-body">Compra tus libros en Nexus con un proceso simple y claro.</p>
+      <p class="footer-f-print">© Nexus 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/style.js"></script>
+</body>
+</html>
