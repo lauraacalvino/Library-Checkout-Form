@@ -6,7 +6,6 @@ This project focuses on creating a clean, accessible, and animated checkout expe
 
 Built as a **design + development resource**, not a final product.
 
----
 
 ## ✨ Features
 
@@ -21,7 +20,6 @@ Built as a **design + development resource**, not a final product.
 - Modular CSS variables for theming
 - Reusable components (inputs, buttons, stepper, panels)
 
----
 
 ## 🛠 Technologies
 
@@ -30,7 +28,6 @@ Built as a **design + development resource**, not a final product.
 - JavaScript (ES6+)  
 - Google Sans Flex  
 
----
 
 ## 🌱 What I Learned
 
@@ -47,7 +44,6 @@ While building this resource, I improved my understanding of:
 
 It helped reinforce how UX, accessibility, and front-end logic work together when creating form-heavy interfaces.
 
----
 
 ## 📍 The Process
 
