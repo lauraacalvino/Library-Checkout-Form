@@ -6,6 +6,8 @@ This project focuses on creating a clean, accessible, and animated checkout expe
 
 Built as a **design + development resource**, not a final product.
 
+Done by: Paola Muñoz, Joan Mascarell and Laura Calviño.
+
 
 ## ✨ Features
 
